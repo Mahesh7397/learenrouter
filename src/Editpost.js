@@ -10,7 +10,7 @@ const Editpost = ({edittitle,setedittitle,editbody,seteditbody,handleedit,posts}
             seteditbody(post.body)
             setedittitle(post.title)
         }
-    },[post])
+    },[post,seteditbody,setedittitle])
 
     return (
     <main className='newpost'>
