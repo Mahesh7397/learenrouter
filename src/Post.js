@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const Post = ({post}) => {
-  //console.log(post)
   return (
     <Link to={`/post/${post.id}`} className='click'>
     <article className='artical'>

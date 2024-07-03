@@ -162,6 +162,10 @@
 .about{
     padding: 5px;
 }
+.Footer{
+    height: 40px;
+    background-color: plum;
+}
 /*desktop screen*/
 @media screen and (min-width:700px){
     .App{

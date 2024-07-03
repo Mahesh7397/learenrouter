@@ -18,7 +18,6 @@ function App() {
   const [search,setsearch]=useState('')
   const [postbody,setpostbody]=useState('')
   const [posttitle,setposttitle]=useState('')
-  //console.log(search)
   const [searchresult,setsearchresult]=useState([])
   const [edittitle,setedittitle]=useState('')
   const [editbody,seteditbody]=useState('')
@@ -108,15 +107,10 @@ function App() {
       fetchposts()
     }
   ,[])
-  //console.log(Posts[0].id)
   return (
     <div className="App">
-      <Header title={'Mahesh'}/>
+      <Header title={'MD MAZU'}/>
       <Nav search={search} setsearch={setsearch}/>
-      {/*<Home posts={searchresult}/>
-      <Missing/>
-      <Post/>
-      <About/>*/}
       <Routes>
         <Route path='/' element={<Home posts={Posts}/>}/>
         <Route path='/post'>
