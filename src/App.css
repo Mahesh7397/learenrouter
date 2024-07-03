@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+/*mobile and tabe screen*/
+
+.App{
+   margin: 0px;
+   padding: 0px;
+   box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+    background-color: plum;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav{
+    background-color: rgba(103, 106, 109, 0.637);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchFrom label{
+    position: absolute;
+    left: -9999px;
 }
-
-.App-link {
-  color: #61dafb;
+.searchFrom{
+    flex:1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchFrom input{
+    height: 35px;
+    width: 60%;
+    margin-left: 22%;
+    border: 2px solid rgb(199, 190, 190);
+    border-radius: 15px;
+    padding-left:5px;
+    font-size: medium;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex: 1;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+.link{
+    height: 25px;
+    width: 50px;
+    border: 2px solid rgb(116, 108, 108);
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.link:hover,.link:focus{
+    background-color: rgb(34, 175, 240);
+}
+.artical{
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 2px solid rgb(143, 143, 143);
+    
+}
+.click{
+    text-decoration: none;
+}
+.post{
+    margin: 2%;
+}
+.button{
+   background-color: rgb(221, 110, 110);
+   height: 30px;
+   width: 12%;
+   text-align: center;
+   border: 2px solid rgb(189, 179, 179);
+   border-radius: 10px;
+   
+}
+.editbut{
+    background-color: rgb(141, 141, 238);
+    height: 30px;
+    width: 18%;
+    text-align: center;
+    border: 2px solid rgb(189, 179, 179);
+    border-radius: 10px;
+}
+.editbut:hover{
+    background-color: rgb(60, 60, 235);
+}
+.postcard{
+    display: flex;
+    flex-direction: column;
+}
+.button:hover{
+    background-color: rgb(219, 69, 69);
+}
+.newpostform{
+    display: flex;
+    width: 100%;
+    flex-direction:column;
+}
+.newpostform textarea{
+    min-width: 100%;
+    width: 70%;
+    height: 200px;
+    border: 2px solid ;
+    margin: 5px;
+    padding: 6px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15x;
+    font-size: 18px;
+    font-weight: 300;
+}
+.newpostform label{
+    width: 70%;
+    font-size: 15px;
+    padding: 3px;
+    font-weight: 600;
+   
+}
+.newpostform input{
+    width: 100%;
+    height: 25px;
+    border: 2px solid;
+    padding: 6px;
+     border-radius: 9px;
+     margin: 5px;
+     font-size: 20px;
+}
+.newpostform button{
+    width: 40%;
+    height: 40px;
+    border: 2px solid ;
+    border-radius: 10px;
+    background-color: rgb(117, 117, 216);
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.newpostform button:hover,.newpostform button:active{
+    background-color: rgb(64, 64, 221);
+}
+.newpost{
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-self: center;
+}
+.missing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    padding: 5px;
+}
+/*desktop screen*/
+@media screen and (min-width:700px){
+    .App{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .nav{
+        flex-direction:row;
+        
+    }
+    .searchFrom input{
+        margin-top:5px;
+    }
 }
