@@ -65,12 +65,6 @@ function App() {
        }
      }
   }
-  const filter=()=>{
-    const filterposts=Posts.filter(post=>(
-      ((post.title).toLowerCase()).includes(search.toLowerCase())||((post.title).toLowerCase()).includes(search.toLowerCase())
-    ))
-    setsearchresult(filterposts)
-  }
   const handledelete=async(id)=>{
     try {
       await api.delete(`/posts/${id}`)
@@ -100,8 +94,11 @@ function App() {
    }
 
   useEffect(()=>{
-    filter()
-  },[search])
+    const filterposts=Posts.filter(post=>(
+      ((post.title).toLowerCase()).includes(search.toLowerCase())||((post.title).toLowerCase()).includes(search.toLowerCase())
+    ))
+    setsearchresult(filterposts)
+  },[search,Posts])
   useEffect(
     ()=>{
       fetchposts()
@@ -112,7 +109,7 @@ function App() {
       <Header title={'MD MAZU'}/>
       <Nav search={search} setsearch={setsearch}/>
       <Routes>
-        <Route path='/' element={<Home posts={Posts}/>}/>
+        <Route path='/' element={<Home posts={searchresult}/>}/>
         <Route path='/post'>
               <Route index element={<NewPost postbody={postbody} posttitle={posttitle} setpostbody={setpostbody} setposttitle={setposttitle} handlesubmit={handlesubmit}/>}/>
               <Route path=':id' element={<PostPage posts={Posts} dele={handledelete} edit={edit}/>}/>
